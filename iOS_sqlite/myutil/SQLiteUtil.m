@@ -227,17 +227,17 @@
             const unsigned char *device_name_c = sqlite3_column_text(stmt, 8);
             const unsigned char *idfa_c = sqlite3_column_text(stmt, 9);
             int os_index_c = sqlite3_column_int(stmt, 10);
-            printf("%s,%s,%s,%s,%s,%s,%s,%s,%s,%d\n",
-                        bundle_id_c,
-                        account_id_c,
-                        phone_num_c,
-                        passwords_c,
-                        remark_c,
-                        keychain_data_c,
-                        files_data_c,
-                        device_name_c,
-                        idfa_c,
-                        os_index_c);
+//            printf("%s,%s,%s,%s,%s,%s,%s,%s,%s,%d\n",
+//                        bundle_id_c,
+//                        account_id_c,
+//                        phone_num_c,
+//                        passwords_c,
+//                        remark_c,
+//                        keychain_data_c,
+//                        files_data_c,
+//                        device_name_c,
+//                        idfa_c,
+//                        os_index_c);
             
             if(bundle_id_c) {
                 BackupModel * model = [[BackupModel alloc] init];
