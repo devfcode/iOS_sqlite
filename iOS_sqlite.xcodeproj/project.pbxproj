@@ -19,6 +19,9 @@
 		3AE3A98229A64391005998B1 /* MyUtilViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AE3A98029A64391005998B1 /* MyUtilViewController.m */; };
 		3AE3A98329A64391005998B1 /* MyUtilViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3AE3A98129A64391005998B1 /* MyUtilViewController.xib */; };
 		3AE3A98629A6520B005998B1 /* SQLiteUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AE3A98529A6520B005998B1 /* SQLiteUtil.m */; };
+		3AE3A98929A65863005998B1 /* BackupModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AE3A98829A65863005998B1 /* BackupModel.m */; };
+		3AE3A98D29A78F45005998B1 /* MyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AE3A98B29A78F45005998B1 /* MyCell.m */; };
+		3AE3A98E29A78F45005998B1 /* MyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3AE3A98C29A78F45005998B1 /* MyCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +45,11 @@
 		3AE3A98129A64391005998B1 /* MyUtilViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyUtilViewController.xib; sourceTree = "<group>"; };
 		3AE3A98429A6520B005998B1 /* SQLiteUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SQLiteUtil.h; sourceTree = "<group>"; };
 		3AE3A98529A6520B005998B1 /* SQLiteUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SQLiteUtil.m; sourceTree = "<group>"; };
+		3AE3A98729A65863005998B1 /* BackupModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BackupModel.h; sourceTree = "<group>"; };
+		3AE3A98829A65863005998B1 /* BackupModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BackupModel.m; sourceTree = "<group>"; };
+		3AE3A98A29A78F45005998B1 /* MyCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyCell.h; sourceTree = "<group>"; };
+		3AE3A98B29A78F45005998B1 /* MyCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyCell.m; sourceTree = "<group>"; };
+		3AE3A98C29A78F45005998B1 /* MyCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,8 +132,13 @@
 				3AE3A97F29A64391005998B1 /* MyUtilViewController.h */,
 				3AE3A98029A64391005998B1 /* MyUtilViewController.m */,
 				3AE3A98129A64391005998B1 /* MyUtilViewController.xib */,
+				3AE3A98A29A78F45005998B1 /* MyCell.h */,
+				3AE3A98B29A78F45005998B1 /* MyCell.m */,
+				3AE3A98C29A78F45005998B1 /* MyCell.xib */,
 				3AE3A98429A6520B005998B1 /* SQLiteUtil.h */,
 				3AE3A98529A6520B005998B1 /* SQLiteUtil.m */,
+				3AE3A98729A65863005998B1 /* BackupModel.h */,
+				3AE3A98829A65863005998B1 /* BackupModel.m */,
 			);
 			path = myutil;
 			sourceTree = "<group>";
@@ -191,6 +204,7 @@
 				3AE3A96529A61E3B005998B1 /* LaunchScreen.storyboard in Resources */,
 				3AE3A97E29A6437F005998B1 /* BasicViewController.xib in Resources */,
 				3AE3A96229A61E3B005998B1 /* Assets.xcassets in Resources */,
+				3AE3A98E29A78F45005998B1 /* MyCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -206,8 +220,10 @@
 				3AE3A96829A61E3B005998B1 /* main.m in Sources */,
 				3AE3A97729A642F4005998B1 /* MyTabBarController.m in Sources */,
 				3AE3A98629A6520B005998B1 /* SQLiteUtil.m in Sources */,
+				3AE3A98D29A78F45005998B1 /* MyCell.m in Sources */,
 				3AE3A97629A642F4005998B1 /* MyNavgationController.m in Sources */,
 				3AE3A97D29A6437F005998B1 /* BasicViewController.m in Sources */,
+				3AE3A98929A65863005998B1 /* BackupModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

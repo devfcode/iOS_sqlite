@@ -6,11 +6,20 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <sqlite3.h>
+#import "BackupModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface SQLiteUtil : NSObject
+
++ (instancetype)sharedManager;
+
+// 添加
+-(void)addModel:(BackupModel *)model;
+// 查询
+-(NSArray<BackupModel *>*)queryModel:(BackupModel *)model;
+// 删除
+-(void)deleteModel:(BackupModel *)model;
 
 @end
 
