@@ -33,7 +33,7 @@ static NSString *cellID = @"mycellid";
 - (IBAction)addActioin:(UIButton *)sender {
     BackupModel *model = [BackupModel new];
     model.bundle_id = @"com.tencent.xin";
-    model.account_id = [NSString stringWithFormat:@"wxid%d",num++];
+    model.account_id = [NSString stringWithFormat:@"wxid%d",arc4random() % 10000];
     model.phone_num = [NSString stringWithFormat:@"1389738%d", arc4random() % 1000];
     model.passwords = [NSString stringWithFormat:@"TFG%dTYFDNCX", arc4random() % 10000];
     model.remark = @"自动化脚本注册";

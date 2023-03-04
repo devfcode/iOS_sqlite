@@ -59,7 +59,7 @@
 
 - (void)createTable {
     // 创建表
-    const char *sql = "CREATE TABLE IF NOT EXISTS app_data (id integer PRIMARY KEY AUTOINCREMENT,bundle_id text NOT NULL,account_id text NOT NULL,phone_num text,passwords text,remark text,keychain_data text,files_data text,device_name text,idfa text,os_index integer);";
+    const char *sql = "CREATE TABLE IF NOT EXISTS app_data (id integer PRIMARY KEY AUTOINCREMENT,bundle_id text NOT NULL,account_id text NOT NULL,phone_num text,passwords text,remark text,keychain_data text,files_data text,device_name text,idfa text,os_index integer, UNIQUE(bundle_id,account_id) ON CONFLICT REPLACE);";
     char *errMsg = NULL;
     
     int result = sqlite3_exec(_db, sql, NULL, NULL, &errMsg);
@@ -71,7 +71,7 @@
 }
 
 // 添加
--(void)addModel:(BackupModel *)model {
+-(BOOL)addModel:(BackupModel *)model {
     // sql语句
     NSMutableString *sql = [NSMutableString string];
     [sql appendString:@"SELECT count(*) FROM app_data "];
@@ -88,35 +88,36 @@
         }
     } else {
         NSLog(@"查询语句有问题");
-        return;
+        return NO;
     }
-
-    if(exist > 1) {//存在就修改
+    
+    int result = -1;
+    if(exist) {//存在就修改
         NSMutableString *sql = [NSMutableString string];
         [sql appendString:@"update app_data set "];
-//        if(model.account_id) {
-//            [sql appendFormat:@"account_id = '%@' ",model.account_id];
-//        }
+        //        if(model.account_id) {
+        //            [sql appendFormat:@"account_id = '%@' ",model.account_id];
+        //        }
         if(model.phone_num) {
-            [sql appendFormat:@"phone_num = '%@' ",model.phone_num];
+            [sql appendFormat:@"phone_num = '%@', ",model.phone_num];
         }
         if(model.passwords) {
-            [sql appendFormat:@"passwords = '%@' ",model.passwords];
+            [sql appendFormat:@"passwords = '%@', ",model.passwords];
         }
         if(model.remark) {
-            [sql appendFormat:@"remark = '%@' ",model.remark];
+            [sql appendFormat:@"remark = '%@', ",model.remark];
         }
         if(model.keychain_data) {
-            [sql appendFormat:@"keychain_data = '%@' ",model.keychain_data];
+            [sql appendFormat:@"keychain_data = '%@', ",model.keychain_data];
         }
         if(model.files_data) {
-            [sql appendFormat:@"files_data = '%@' ",model.files_data];
+            [sql appendFormat:@"files_data = '%@', ",model.files_data];
         }
         if(model.device_name) {
-            [sql appendFormat:@"device_name = '%@' ",model.device_name];
+            [sql appendFormat:@"device_name = '%@', ",model.device_name];
         }
         if(model.idfa) {
-            [sql appendFormat:@"idfa = '%@' ",model.idfa];
+            [sql appendFormat:@"idfa = '%@', ",model.idfa];
         }
         if(model.os_index) {
             [sql appendFormat:@"os_index = %d ",model.os_index.intValue];
@@ -126,7 +127,7 @@
         
         // 执行 sql 语句
         char *errMsg = NULL;
-        int result = sqlite3_exec(_db, sql.UTF8String, NULL, NULL, &errMsg);
+        result = sqlite3_exec(_db, sql.UTF8String, NULL, NULL, &errMsg);
         
         if (result == SQLITE_OK) {
             NSLog(@"更新数据成功");
@@ -190,7 +191,7 @@
         
         // 执行 sql 语句
         char *errMsg = NULL;
-        int result = sqlite3_exec(_db, sql.UTF8String, NULL, NULL, &errMsg);
+        result = sqlite3_exec(_db, sql.UTF8String, NULL, NULL, &errMsg);
         
         if (result == SQLITE_OK) {
             NSLog(@"添加数据成功");
@@ -198,7 +199,7 @@
             NSLog(@"添加数据失败 - %s",errMsg);
         }
     }
-
+    return (result == SQLITE_OK);
 }
 
 // 查询
@@ -227,17 +228,17 @@
             const unsigned char *device_name_c = sqlite3_column_text(stmt, 8);
             const unsigned char *idfa_c = sqlite3_column_text(stmt, 9);
             int os_index_c = sqlite3_column_int(stmt, 10);
-//            printf("%s,%s,%s,%s,%s,%s,%s,%s,%s,%d\n",
-//                        bundle_id_c,
-//                        account_id_c,
-//                        phone_num_c,
-//                        passwords_c,
-//                        remark_c,
-//                        keychain_data_c,
-//                        files_data_c,
-//                        device_name_c,
-//                        idfa_c,
-//                        os_index_c);
+            //            printf("%s,%s,%s,%s,%s,%s,%s,%s,%s,%d\n",
+            //                        bundle_id_c,
+            //                        account_id_c,
+            //                        phone_num_c,
+            //                        passwords_c,
+            //                        remark_c,
+            //                        keychain_data_c,
+            //                        files_data_c,
+            //                        device_name_c,
+            //                        idfa_c,
+            //                        os_index_c);
             
             if(bundle_id_c) {
                 BackupModel * model = [[BackupModel alloc] init];
@@ -266,7 +267,7 @@
 -(void)deleteModel:(BackupModel *)model {
     NSMutableString *sql = [NSMutableString string];
     [sql appendFormat:@"delete from app_data where bundle_id = '%@' and account_id = '%@';",model.bundle_id,model.account_id];
-     
+    
     // 执行 sql 语句
     char *errMsg = NULL;
     int result = sqlite3_exec(_db, sql.UTF8String, NULL, NULL, &errMsg);

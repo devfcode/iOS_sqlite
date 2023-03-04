@@ -15,7 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 + (instancetype)sharedManager;
 
 // 添加
--(void)addModel:(BackupModel *)model;
+-(BOOL)addModel:(BackupModel *)model;
 // 查询
 -(NSArray<BackupModel *>*)queryModel:(BackupModel *)model;
 // 删除

@@ -14,8 +14,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic,copy)NSString *bundle_id;       // 所备份的应用标识符
 
 @property(nonatomic,copy)NSString *account_id;      // 账户id
-@property(nonatomic,copy)NSString *phone_num;       // 手机号
 @property(nonatomic,copy)NSString *passwords;       // 密码
+@property(nonatomic,copy)NSString *phone_num;       // 手机号
 @property(nonatomic,copy)NSString *remark;          // 备注
 
 @property(nonatomic,copy)NSString *keychain_data;   // Keychain 数据
