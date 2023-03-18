@@ -21,8 +21,8 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="cWg-k6-aNo">
-                    <rect key="frame" x="10" y="59" width="373" height="210"/>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="cWg-k6-aNo">
+                    <rect key="frame" x="10" y="62" width="373" height="195"/>
                     <subviews>
                         <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4RE-27-dCG">
                             <rect key="frame" x="0.0" y="0.0" width="373" height="45"/>
@@ -30,7 +30,7 @@
                             <textInputTraits key="textInputTraits"/>
                         </textField>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O4T-IB-58F">
-                            <rect key="frame" x="0.0" y="55" width="373" height="45"/>
+                            <rect key="frame" x="0.0" y="50" width="373" height="45"/>
                             <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="45" id="TYl-Hx-fKf"/>
@@ -42,7 +42,7 @@
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fOE-L3-Gbf">
-                            <rect key="frame" x="0.0" y="110" width="373" height="45"/>
+                            <rect key="frame" x="0.0" y="100" width="373" height="45"/>
                             <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
                             <state key="normal" title="Button"/>
                             <buttonConfiguration key="configuration" style="plain" title="删除数据"/>
@@ -51,7 +51,7 @@
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xuS-9s-hHL">
-                            <rect key="frame" x="0.0" y="165" width="373" height="45"/>
+                            <rect key="frame" x="0.0" y="150" width="373" height="45"/>
                             <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
                             <state key="normal" title="Button"/>
                             <buttonConfiguration key="configuration" style="plain" title="查询数据"/>
@@ -62,14 +62,14 @@
                     </subviews>
                 </stackView>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="fOs-iN-Fbm">
-                    <rect key="frame" x="10" y="279" width="373" height="529"/>
+                    <rect key="frame" x="10" y="267" width="373" height="541"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </tableView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="cWg-k6-aNo" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" id="3pm-ar-6Qa"/>
+                <constraint firstItem="cWg-k6-aNo" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="3" id="3pm-ar-6Qa"/>
                 <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="fOs-iN-Fbm" secondAttribute="trailing" constant="10" id="OnY-7r-OBb"/>
                 <constraint firstItem="fOs-iN-Fbm" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="10" id="PHp-GT-YV8"/>
                 <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="cWg-k6-aNo" secondAttribute="trailing" constant="10" id="Th1-Yv-MTB"/>

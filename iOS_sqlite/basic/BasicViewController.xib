@@ -19,8 +19,8 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="dzN-zn-W7Z">
-                    <rect key="frame" x="10" y="59" width="373" height="265"/>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="dzN-zn-W7Z">
+                    <rect key="frame" x="10" y="64" width="373" height="245"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zcz-NY-w4j">
                             <rect key="frame" x="0.0" y="0.0" width="373" height="45"/>
@@ -35,7 +35,7 @@
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZWY-wg-bSN">
-                            <rect key="frame" x="0.0" y="55" width="373" height="45"/>
+                            <rect key="frame" x="0.0" y="50" width="373" height="45"/>
                             <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
                             <state key="normal" title="Button"/>
                             <buttonConfiguration key="configuration" style="plain" title="update"/>
@@ -44,7 +44,7 @@
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Utp-qA-dKN">
-                            <rect key="frame" x="0.0" y="110" width="373" height="45"/>
+                            <rect key="frame" x="0.0" y="100" width="373" height="45"/>
                             <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
                             <state key="normal" title="Button"/>
                             <buttonConfiguration key="configuration" style="plain" title="query"/>
@@ -53,7 +53,7 @@
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="61M-EO-Ewo">
-                            <rect key="frame" x="0.0" y="165" width="373" height="45"/>
+                            <rect key="frame" x="0.0" y="150" width="373" height="45"/>
                             <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
                             <state key="normal" title="Button"/>
                             <buttonConfiguration key="configuration" style="plain" title="delete"/>
@@ -62,7 +62,7 @@
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mbv-aW-mn3">
-                            <rect key="frame" x="0.0" y="220" width="373" height="45"/>
+                            <rect key="frame" x="0.0" y="200" width="373" height="45"/>
                             <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
                             <state key="normal" title="Button"/>
                             <buttonConfiguration key="configuration" style="plain" title="查询所有表中的数据"/>
@@ -76,7 +76,7 @@
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="dzN-zn-W7Z" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" id="4jC-vm-asE"/>
+                <constraint firstItem="dzN-zn-W7Z" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="5" id="4jC-vm-asE"/>
                 <constraint firstItem="dzN-zn-W7Z" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="GGZ-bW-cTH"/>
                 <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="dzN-zn-W7Z" secondAttribute="trailing" constant="10" id="cW9-fr-Yya"/>
             </constraints>

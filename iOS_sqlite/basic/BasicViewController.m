@@ -155,4 +155,8 @@
     }
 }
 
+-(void)dealloc {
+    sqlite3_close(_db);
+}
+
 @end

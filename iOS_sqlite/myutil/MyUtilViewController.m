@@ -28,6 +28,7 @@ static NSString *cellID = @"mycellid";
     self.myTableView.delegate = self;
     self.myTableView.dataSource = self;
     [self.myTableView registerNib:[UINib nibWithNibName:@"MyCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:cellID];
+    self.myTableView.tableFooterView = [UIView new];
 }
 
 - (IBAction)addActioin:(UIButton *)sender {
