@@ -9,7 +9,6 @@
 #import "SQLiteUtil.h"
 #import "MyCell.h"
 
-static int num = 100;
 static NSString *cellID = @"mycellid";
 @interface MyUtilViewController ()<UITextFieldDelegate,UITableViewDelegate,UITableViewDataSource>
 
